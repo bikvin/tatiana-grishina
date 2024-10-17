@@ -4,7 +4,6 @@ import Footer from "@/components/mainPage/Footer/Footer";
 import Header from "@/components/mainPage/Header/Header";
 import Help from "@/components/mainPage/Help/Help";
 import HeroSection from "@/components/mainPage/HeroSection/HeroSection";
-import ImageBar from "@/components/mainPage/ImageBar/ImageBar";
 import Links from "@/components/mainPage/Links/Links";
 import LongImageBar from "@/components/mainPage/LongImageBar/LongImageBar";
 import Prices from "@/components/mainPage/Prices/Prices";
