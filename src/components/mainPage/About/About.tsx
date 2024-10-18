@@ -1,14 +1,7 @@
 "use client";
 import React from "react";
-import { GiDiploma } from "react-icons/gi";
-import { AiOutlineRise } from "react-icons/ai";
-import { HiOutlineDesktopComputer } from "react-icons/hi";
-import { GiBrain } from "react-icons/gi";
-import { FaPuzzlePiece } from "react-icons/fa";
-import { SiHuggingface } from "react-icons/si";
-import { AiOutlineLock } from "react-icons/ai";
-import { AiOutlineStar } from "react-icons/ai";
-import { GiMeditation } from "react-icons/gi";
+
+import { MdOutlineCheck } from "react-icons/md";
 import { motion } from "framer-motion";
 
 export default function About() {
@@ -30,22 +23,22 @@ export default function About() {
         >
           <ul>
             <li className="flex items-center mb-8">
-              <div className="flex-shrink-0 w-14 h-14 mr-4">
-                <GiDiploma className="w-full h-full" />
+              <div className="flex-shrink-0 w-10 h-10 mr-4">
+                <MdOutlineCheck className="w-full h-full text-slate-500" />
               </div>
               <div>Дипломированный психолог</div>
             </li>
 
             <li className="flex items-center mb-8">
-              <div className="flex-shrink-0 w-14 h-14 mr-4">
-                <AiOutlineRise className="w-full h-full" />
+              <div className="flex-shrink-0  w-10 h-10 mr-4">
+                <MdOutlineCheck className="w-full h-full  text-slate-500" />
               </div>
               <div>Регулярно повышаю уровень знаний</div>
             </li>
 
             <li className="flex items-center">
-              <div className="flex-shrink-0 w-14 h-14 mr-4">
-                <HiOutlineDesktopComputer className="w-full h-full" />
+              <div className="flex-shrink-0  w-10 h-10  mr-4">
+                <MdOutlineCheck className="w-full h-full  text-slate-500" />
               </div>
               <div>
                 Провожу консультации онлайн
@@ -66,15 +59,15 @@ export default function About() {
         >
           <ul>
             <li className="flex items-center mb-8">
-              <div className="flex-shrink-0 w-14 h-14 mr-4">
-                <GiBrain className="w-full h-full" />
+              <div className="flex-shrink-0  w-10 h-10  mr-4">
+                <MdOutlineCheck className="w-full h-full  text-slate-500" />
               </div>
               <div>Работаю в когнитивно-поведенческом подходе (КПТ)</div>
             </li>
 
             <li className="flex items-center">
-              <div className="flex-shrink-0 w-14 h-14 mr-4">
-                <FaPuzzlePiece className="w-full h-full" />
+              <div className="flex-shrink-0  w-10 h-10 mr-4">
+                <MdOutlineCheck className="w-full h-full  text-slate-500" />
               </div>
               <div>Дополнительно использую и другие методы</div>
             </li>
@@ -90,9 +83,9 @@ export default function About() {
         >
           <ul>
             <li className="flex flex-col items-center justify-center mb-8  text-center">
-              <div className="flex-shrink-0 w-14 h-14 mr-4">
-                <SiHuggingface className="w-full h-full" />
-              </div>
+              {/* <div className="flex-shrink-0 w-14 h-14 mr-4">
+                <MdOutlineCheck className="w-full h-full" />
+              </div> */}
               <div>
                 В работе всегда создаю безопасное поддерживающее пространство и
                 стремлюсь к теплому доверительному контакту
@@ -100,9 +93,9 @@ export default function About() {
             </li>
 
             <li className="flex flex-col items-center justify-center  text-center">
-              <div className="flex-shrink-0 w-14 h-14 mr-4">
-                <AiOutlineLock className="w-full h-full" />
-              </div>
+              {/* <div className="flex-shrink-0 w-14 h-14 mr-4">
+                <MdOutlineCheck className="w-full h-full" />
+              </div> */}
               <div>Гарантирую неразглашение личных данных.</div>
             </li>
           </ul>
@@ -113,20 +106,20 @@ export default function About() {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, ease: "backInOut" }}
           viewport={{ once: true, amount: 0.4 }}
-          className="bg-green5 font-bitter font-normal  text-lg  tracking-wide px-16 py-10 w-[90%] md:w-[55%] flex flex-col items-center shadow-main self-end mb-8 mr-10"
+          className="bg-green6 font-bitter font-normal  text-lg  tracking-wide px-16 py-10 w-[90%] md:w-[55%] flex flex-col items-center shadow-main self-end mb-8 mr-10"
         >
           <h4 className="text-2xl mt-10 mb-8 font-bold">Профильные темы:</h4>
           <ul>
-            <li className="flex flex-col items-center justify-center mb-8  text-center">
-              <div className="flex-shrink-0 w-14 h-14 mr-4">
-                <AiOutlineStar className="w-full h-full" />
+            <li className="flex items-center mb-8">
+              <div className="flex-shrink-0  w-10 h-10  mr-4">
+                <MdOutlineCheck className="w-full h-full  text-slate-500" />
               </div>
               <div>Повышение самооценки</div>
             </li>
 
-            <li className="flex flex-col items-center justify-center  text-center">
-              <div className="flex-shrink-0 w-14 h-14 mr-4">
-                <GiMeditation className="w-full h-full" />
+            <li className="flex items-center">
+              <div className="flex-shrink-0  w-10 h-10 mr-4">
+                <MdOutlineCheck className="w-full h-full  text-slate-500" />
               </div>
               <div>Понижение тревоги</div>
             </li>

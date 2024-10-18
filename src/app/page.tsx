@@ -21,7 +21,7 @@ export default function Home() {
           "/img/bar/2.jpg",
         ]}
       /> */}
-      <LongImageBar imageLink={"/img/bar/long1.jpg"} />
+      <LongImageBar imageLink={"/img/bar/long7.jpg"} />
       <About />
 
       {/* <ImageBar
@@ -42,7 +42,7 @@ export default function Home() {
           "/img/bar/13.jpg",
         ]}
       /> */}
-      <LongImageBar imageLink={"/img/bar/long4.jpg"} />
+      <LongImageBar imageLink={"/img/bar/long8.jpg"} />
       <Prices />
       {/* <ImageBar
         imageLinks={[
@@ -63,6 +63,21 @@ export default function Home() {
         ]}
       /> */}
       <LongImageBar imageLink={"/img/bar/long6.jpg"} />
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <LongImageBar imageLink={"/img/bar/long9.jpg"} />
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <LongImageBar imageLink={"/img/bar/long10.jpg"} />
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <LongImageBar imageLink={"/img/bar/long11.jpg"} />
       <Links />
       <Footer />
     </>

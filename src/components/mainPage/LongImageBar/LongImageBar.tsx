@@ -7,17 +7,6 @@ export default function LongImageBar({ imageLink }: { imageLink: string }) {
       style={{
         backgroundImage: `url(${imageLink})`, // Direct URL
       }}
-    >
-      {/* {imageLinks.map((link) => (
-        <Image
-          key={link}
-          src={link}
-          alt=""
-          width={200}
-          height={200}
-          className="h-[200px] w-[200px] shadow-main"
-        />
-      ))} */}
-    </div>
+    ></div>
   );
 }
