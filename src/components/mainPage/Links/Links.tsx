@@ -1,8 +1,9 @@
 "use client";
 import React from "react";
-import { MdNightsStay } from "react-icons/md";
-import { MdOutlineWarning } from "react-icons/md";
-import { FaRegSmile } from "react-icons/fa";
+// import { MdNightsStay } from "react-icons/md";
+// import { MdOutlineWarning } from "react-icons/md";
+// import { FaRegSmile } from "react-icons/fa";
+import { MdOutlineCheck } from "react-icons/md";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
@@ -26,7 +27,7 @@ export default function Prices() {
             href="https://www.b17.ru/articles/tatiana_grishina/?tags=samootsenka"
             className="flex items-centers"
           >
-            <FaRegSmile className="text-3xl mr-4" />
+            <MdOutlineCheck className="text-3xl mr-4" />
             <div className="flex items-center">Про самооценку</div>
           </Link>
         </h4>
@@ -35,7 +36,7 @@ export default function Prices() {
             href="https://www.b17.ru/articles/tatiana_grishina/?tags=trevoga"
             className="flex items-centers"
           >
-            <MdOutlineWarning className="text-3xl mr-4" />
+            <MdOutlineCheck className="text-3xl mr-4" />
             <div className="flex items-center">Про тревогу</div>
           </Link>
         </h4>
@@ -44,7 +45,7 @@ export default function Prices() {
             href="https://www.b17.ru/articles/tatiana_grishina/?tags=174130"
             className="flex items-centers"
           >
-            <MdNightsStay className="text-3xl mr-4" />
+            <MdOutlineCheck className="text-3xl mr-4" />
             <div className="flex items-center">Про бессонницу</div>
           </Link>
         </h4>

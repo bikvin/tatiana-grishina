@@ -20,26 +20,26 @@ export default function Prices() {
         viewport={{ once: true, amount: 0.4 }}
         className="bg-green1 flex flex-col md:flex-row  shadow-main"
       >
-        <div className="font-bitter font-normal  text-lg  tracking-wide px-16 py-10 md:w-[30%] flex flex-col items-center z-[1] mb-4 md:mb-0">
-          <div className="min-h-36">
-            <h4 className="text-2xl mt-10 mb-8 font-bold  text-center">
+        <div className="font-bitter font-normal  text-lg  tracking-wide px-16 py-5 md:py-10 md:w-[30%] flex flex-col items-center ">
+          <div className="md:min-h-36">
+            <h4 className="text-2xl mt-5 mb-4 md:mt-10 md:mb-8 font-bold  text-center">
               Длительность сессии:
             </h4>
           </div>
           <div>50 минут</div>
         </div>
-        <div className="font-bitter font-normal  text-lg  tracking-wide px-16 py-10  md:w-[40%] flex flex-col items-center  z-[10]  mb-4 md:mb-0">
-          <div className="min-h-36">
-            <h4 className="text-2xl mt-10 mb-8 font-bold  text-center">
+        <div className="font-bitter font-normal  text-lg  tracking-wide px-16 py-5 md:py-10  md:w-[40%] flex flex-col items-center  ">
+          <div className="md:min-h-36">
+            <h4 className="text-2xl mt-5 mb-4 md:mt-10 md:mb-8 font-bold  text-center">
               Стоимость:
             </h4>
           </div>
 
           <div>3 000 руб.</div>
         </div>
-        <div className="font-bitter font-normal  text-lg  tracking-wide px-16 py-10 md:w-[45%] flex flex-col items-center  z-[1] ">
-          <div className="min-h-36">
-            <h4 className="text-2xl mt-10 mb-8 font-bold text-center">
+        <div className="font-bitter font-normal  text-lg  tracking-wide px-16 py-5 md:py-10 md:w-[45%] flex flex-col items-center  ">
+          <div className="md:min-h-36">
+            <h4 className="text-2xl mt-5 mb-4 md:mt-10 md:mb-8 font-bold text-center">
               Сессии проходят онлайн:
             </h4>
           </div>

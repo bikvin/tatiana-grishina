@@ -7,20 +7,14 @@ import HeroSection from "@/components/mainPage/HeroSection/HeroSection";
 import Links from "@/components/mainPage/Links/Links";
 import LongImageBar from "@/components/mainPage/LongImageBar/LongImageBar";
 import Prices from "@/components/mainPage/Prices/Prices";
+import Video from "@/components/mainPage/Video/Video";
 
 export default function Home() {
   return (
     <>
       <Header />
       <HeroSection />
-      {/* <ImageBar
-        imageLinks={[
-          "/img/bar/1.jpg",
-          "/img/bar/6.jpg",
-          "/img/bar/5.jpg",
-          "/img/bar/2.jpg",
-        ]}
-      /> */}
+      <Video />
       <LongImageBar imageLink={"/img/bar/long6.jpg"} />
       <About />
 
