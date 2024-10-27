@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { helpData } from "./HelpData";
+// import { helpData } from "./HelpData";
 // import AccordionItem from "./accordionItem";
 import parse from "html-react-parser";
 
@@ -12,7 +12,11 @@ import {
 } from "@/components/ui/accordion";
 import { motion } from "framer-motion";
 
-export default function Help() {
+export default function HelpClient({
+  itemsData,
+}: {
+  itemsData: { id: string; header: string; text: string }[];
+}) {
   return (
     <div className="">
       <section
@@ -29,10 +33,10 @@ export default function Help() {
           viewport={{ once: true, amount: 0.4 }}
         >
           <Accordion type="single" collapsible>
-            {helpData.map((item, index) => (
+            {itemsData.map((item, index) => (
               <AccordionItem value={`item-${index}`} key={index}>
                 <AccordionTrigger>{item.header}</AccordionTrigger>
-                <AccordionContent>{parse(item.content)}</AccordionContent>
+                <AccordionContent>{parse(item.text)}</AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
