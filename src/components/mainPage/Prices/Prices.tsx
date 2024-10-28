@@ -3,7 +3,13 @@ import React from "react";
 
 import { motion } from "framer-motion";
 
-export default function Prices() {
+export default function Prices({
+  sessionLength,
+  price,
+}: {
+  sessionLength: string;
+  price: string;
+}) {
   return (
     <section
       id="prices"
@@ -26,7 +32,7 @@ export default function Prices() {
               Длительность сессии:
             </h4>
           </div>
-          <div>50 минут</div>
+          <div>{sessionLength}</div>
         </div>
         <div className="font-bitter font-normal  text-lg  tracking-wide px-16 py-5 md:py-10  md:w-[40%] flex flex-col items-center  ">
           <div className="md:min-h-36">
@@ -35,7 +41,7 @@ export default function Prices() {
             </h4>
           </div>
 
-          <div>3 000 руб.</div>
+          <div>{price}</div>
         </div>
         <div className="font-bitter font-normal  text-lg  tracking-wide px-16 py-5 md:py-10 md:w-[45%] flex flex-col items-center  ">
           <div className="md:min-h-36">

@@ -3,7 +3,13 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-export default function Contacts() {
+export default function Contacts({
+  telegram,
+  phone,
+}: {
+  telegram: string;
+  phone: string;
+}) {
   return (
     <section
       id="contacts"
@@ -33,7 +39,7 @@ export default function Contacts() {
               height={30}
               alt=""
             />
-            Telegram : <b>@gritaty</b>
+            Telegram : <b>{telegram}</b>
           </a>
         </div>
         <div className="">
@@ -48,7 +54,7 @@ export default function Contacts() {
               alt=""
               className=""
             />
-            WhatsApp : <b>+7-916-523-55-46</b>
+            WhatsApp : <b>{phone}</b>
           </a>
         </div>
       </motion.div>

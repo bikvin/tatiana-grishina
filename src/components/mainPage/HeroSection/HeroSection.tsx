@@ -3,7 +3,15 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-export default function HeroSection() {
+export default function HeroSection({
+  header,
+  subHeader,
+}: {
+  header: string;
+  subHeader: string;
+}) {
+  console.log("Header", header);
+
   return (
     <section className="py-0 md:py-20 px-8 md:px-10  overflow-x-hidden max-w-screen-lg mx-auto flex  md:flex-row flex-col-reverse mb-10">
       <motion.div
@@ -20,10 +28,11 @@ export default function HeroSection() {
         className="flex-1 font-thin  text-lg flex items-center justify-center tracking-wide"
       >
         <div className="p-8">
-          <h2 className="font-bitter font-bold text-slate-800 text-4xl mb-4">
-            Привет! <br />Я Татьяна Гришина, психолог.
-          </h2>
-          <p>Помогаю жить спокойно счастливо и гармонично.</p>
+          <h2
+            className="font-bitter font-bold text-slate-800 text-4xl mb-4"
+            dangerouslySetInnerHTML={{ __html: header }}
+          ></h2>
+          <p>{subHeader}</p>
         </div>
       </motion.div>
       <motion.div

@@ -2,7 +2,13 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-export default function Video() {
+export default function Video({
+  header,
+  subHeader,
+}: {
+  header: string;
+  subHeader: string;
+}) {
   return (
     <section className="py-0 md:py-20 px-8 md:px-10  overflow-x-hidden max-w-screen-lg mx-auto flex  md:flex-row flex-col-reverse mb-10">
       <motion.div
@@ -53,12 +59,11 @@ export default function Video() {
         className="flex-1 flex items-center"
       >
         <div className="hidden md:block p-8">
-          <h2 className="font-bitter font-bold text-slate-800 text-4xl mb-4">
-            &larr; Тут чуть подробнее. <br />
-          </h2>
-          <p className="font-thin  text-lg tracking-wide">
-            Про мои методы и подходы.
-          </p>
+          <h2
+            className="font-bitter font-bold text-slate-800 text-4xl mb-4"
+            dangerouslySetInnerHTML={{ __html: header }}
+          ></h2>
+          <p className="font-thin  text-lg tracking-wide">{subHeader}</p>
         </div>
       </motion.div>
     </section>

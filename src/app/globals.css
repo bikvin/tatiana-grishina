@@ -111,6 +111,10 @@
     @apply border border-slate-300 focus:border-slate-600 focus:outline-none rounded-md block w-full py-1 px-2 mb-4;
   }
 
+  .admin-horizontal-line {
+    @apply border border-slate-300 my-10;
+  }
+
   .error {
     @apply text-red-800;
   }

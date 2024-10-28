@@ -59,6 +59,13 @@ export default function Header({ page }: { page?: string }) {
         >
           <li
             className={`text-center pb-2 md:pb-0 hover:underline ${
+              page === "main" ? "underline" : ""
+            }`}
+          >
+            <Link href="/admin">Главная</Link>
+          </li>
+          <li
+            className={`text-center pb-2 md:pb-0 hover:underline ${
               page === "help" ? "underline" : ""
             }`}
           >

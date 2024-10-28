@@ -51,7 +51,7 @@ export default function FormButton({
       >
         {pending ? "Загружаем..." : children}
       </button>
-      <p className="saveButtonSuccessText">{successMessage}</p>
+      <p className="text-emerald-600 text-center">{successMessage}</p>
     </div>
   );
 }
