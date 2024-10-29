@@ -2,7 +2,7 @@
 import Link from "next/link";
 import React, { useState, useRef, useEffect } from "react";
 import { logout } from "@/actions/auth";
-
+import TopMenuItem from "./topMenuItem";
 import { RxHamburgerMenu } from "react-icons/rx";
 
 export default function Header({ page }: { page?: string }) {
@@ -57,27 +57,29 @@ export default function Header({ page }: { page?: string }) {
           className={`overflow-hidden transition-[max-height] duration-500 ease-in-out md:flex flex-col md:flex-row justify-center md:justify-end items-center gap-2 tracking-wide max-h-0 md:max-h-full`}
           style={{ maxHeight: isMobile && isMounted ? maxHeight : undefined }} // Only apply maxHeight on mobile
         >
-          <li
-            className={`text-center pb-2 md:pb-0 hover:underline ${
-              page === "main" ? "underline" : ""
-            }`}
+          <TopMenuItem
+            currentPage={page}
+            menuItemTargetPage="main"
+            link="/admin"
           >
-            <Link href="/admin">Главная</Link>
-          </li>
-          <li
-            className={`text-center pb-2 md:pb-0 hover:underline ${
-              page === "help" ? "underline" : ""
-            }`}
+            Главная
+          </TopMenuItem>
+
+          <TopMenuItem
+            currentPage={page}
+            menuItemTargetPage="help"
+            link="admin/help"
           >
-            <Link href="/admin/help">С чем помогаю</Link>
-          </li>
-          <li
-            className={`text-center pb-2 md:pb-0 hover:underline ${
-              page === "user" ? "underline" : ""
-            }`}
+            С чем помогаю
+          </TopMenuItem>
+
+          <TopMenuItem
+            currentPage={page}
+            menuItemTargetPage="user"
+            link="/admin/user"
           >
-            <Link href="/admin/user">Пользователь</Link>
-          </li>
+            Пользователь
+          </TopMenuItem>
           <li className="text-center pb-2 md:pb-0   hover:text-black transition-colors  hover:underline ">
             <div>
               <form action={logout}>
