@@ -11,6 +11,7 @@ interface EditSettingsFormState {
     subHeader1?: string[];
     header2?: string[];
     subHeader2?: string[];
+    videoId?: string[];
     sessionLength?: string[];
     price?: string[];
     telegram?: string[];
@@ -30,6 +31,7 @@ export async function editSettings(
   const subHeader1 = formData.get("subHeader1");
   const header2 = formData.get("header2");
   const subHeader2 = formData.get("subHeader2");
+  const videoId = formData.get("videoId");
   const sessionLength = formData.get("sessionLength");
   const price = formData.get("price");
   const telegram = formData.get("telegram");
@@ -40,6 +42,7 @@ export async function editSettings(
     subHeader1: subHeader1,
     header2: header2,
     subHeader2: subHeader2,
+    videoId: videoId,
     sessionLength: sessionLength,
     price: price,
     telegram: telegram,
@@ -78,6 +81,14 @@ export async function editSettings(
         create: {
           field: "subHeader2",
           value: result.data.subHeader2,
+        },
+      }),
+      db.settings.upsert({
+        where: { field: "videoId" },
+        update: { value: result.data.videoId },
+        create: {
+          field: "videoId",
+          value: result.data.videoId,
         },
       }),
       db.settings.upsert({

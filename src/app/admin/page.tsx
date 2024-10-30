@@ -13,6 +13,7 @@ export default async function AdminPage() {
           { field: "subHeader1" },
           { field: "header2" },
           { field: "subHeader2" },
+          { field: "videoId" },
           { field: "sessionLength" },
           { field: "price" },
           { field: "telegram" },
@@ -27,6 +28,7 @@ export default async function AdminPage() {
         subHeader1: data.find((el) => el.field === "subHeader1")?.value || "",
         header2: data.find((el) => el.field === "header2")?.value || "",
         subHeader2: data.find((el) => el.field === "subHeader2")?.value || "",
+        videoId: data.find((el) => el.field === "videoId")?.value || "",
         sessionLength:
           data.find((el) => el.field === "sessionLength")?.value || "",
         price: data.find((el) => el.field === "price")?.value || "",

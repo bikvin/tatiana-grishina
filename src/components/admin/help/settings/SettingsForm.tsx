@@ -9,6 +9,7 @@ export default function SettingsForm({
   subHeader1 = "",
   header2 = "",
   subHeader2 = "",
+  videoId = "",
   sessionLength = "",
   price = "",
   telegram = "",
@@ -18,6 +19,7 @@ export default function SettingsForm({
   subHeader1: string;
   header2: string;
   subHeader2: string;
+  videoId: string;
   sessionLength: string;
   price: string;
   telegram: string;
@@ -46,6 +48,9 @@ export default function SettingsForm({
         Подзаголовок 1
       </FormInput>
       <div className="admin-horizontal-line"></div>
+      <FormInput name="videoId" formState={formState} defaultValue={videoId}>
+        ID видео с Vimeo (например 1010207140)
+      </FormInput>
       <FormInput name="header2" formState={formState} defaultValue={header2}>
         Заголовок 2
       </FormInput>

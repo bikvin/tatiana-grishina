@@ -5,9 +5,11 @@ import { motion } from "framer-motion";
 export default function Video({
   header,
   subHeader,
+  videoId,
 }: {
   header: string;
   subHeader: string;
+  videoId: string;
 }) {
   return (
     <section className="py-0 md:py-20 px-8 md:px-10  overflow-x-hidden max-w-screen-lg mx-auto flex  md:flex-row flex-col-reverse mb-10">
@@ -21,7 +23,7 @@ export default function Video({
         <div className="w-[80vw] md:w-[25vw] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
           <div className="relative w-full pb-[177.78%] bg-black">
             <iframe
-              src={`https://player.vimeo.com/video/1021720259`}
+              src={`https://player.vimeo.com/video/${videoId}`}
               className="absolute top-0 left-0 w-full h-full"
               frameBorder="0"
               allow="autoplay; fullscreen; picture-in-picture"

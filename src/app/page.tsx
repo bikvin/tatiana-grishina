@@ -24,6 +24,7 @@ export default async function Home() {
               "subHeader1",
               "header2",
               "subHeader2",
+              "videoId",
               "sessionLength",
               "price",
               "telegram",
@@ -52,6 +53,7 @@ export default async function Home() {
       header2: settingsData.find((el) => el.field === "header2")?.value || "",
       subHeader2:
         settingsData.find((el) => el.field === "subHeader2")?.value || "",
+      videoId: settingsData.find((el) => el.field === "videoId")?.value || "",
       sessionLength:
         settingsData.find((el) => el.field === "sessionLength")?.value || "",
       price: settingsData.find((el) => el.field === "price")?.value || "",
@@ -77,7 +79,11 @@ export default async function Home() {
     <>
       <Header />
       <HeroSection header={settings.header1} subHeader={settings.subHeader1} />
-      <Video header={settings.header2} subHeader={settings.subHeader2} />
+      <Video
+        header={settings.header2}
+        subHeader={settings.subHeader2}
+        videoId={settings.videoId}
+      />
       <LongImageBar imageLink={"/img/bar/long6.jpg"} />
       <About aboutData={about} />
 

@@ -5,6 +5,7 @@ export const editSettingsSchema = z.object({
   subHeader1: z.string().min(1, { message: "Значение не может быть пустым" }),
   header2: z.string().min(1, { message: "Значение не может быть пустым" }),
   subHeader2: z.string().min(1, { message: "Значение не может быть пустым" }),
+  videoId: z.string().min(1, { message: "Значение не может быть пустым" }),
   sessionLength: z
     .string()
     .min(1, { message: "Значение не может быть пустым" }),
