@@ -7,15 +7,17 @@ export default function HelpPage() {
     <>
       <Header page="help" />
       <div className="max-w-screen-lg mx-auto ">
-        <div className="mt-10 flex justify-end">
-          <Link
-            className="link-button link-button-green"
-            href="/admin/help/new"
-          >
-            Новый пункт
-          </Link>
+        <div className="w-[90%] mx-auto">
+          <div className=" mt-10 flex justify-end">
+            <Link
+              className="link-button link-button-green"
+              href="/admin/help/new"
+            >
+              Новый пункт
+            </Link>
+          </div>
+          <HelpEditList />
         </div>
-        <HelpEditList />
       </div>
     </>
   );

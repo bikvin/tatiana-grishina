@@ -12,39 +12,62 @@ import { db } from "@/db";
 
 export default async function Home() {
   let settings;
+  let about;
 
   try {
-    const data = await db.settings.findMany({
-      where: {
-        OR: [
-          { field: "header1" },
-          { field: "subHeader1" },
-          { field: "header2" },
-          { field: "subHeader2" },
-          { field: "sessionLength" },
-          { field: "price" },
-          { field: "telegram" },
-          { field: "phone" },
-        ],
-      },
-    });
+    const [settingsData, aboutData] = await Promise.all([
+      db.settings.findMany({
+        where: {
+          field: {
+            in: [
+              "header1",
+              "subHeader1",
+              "header2",
+              "subHeader2",
+              "sessionLength",
+              "price",
+              "telegram",
+              "phone",
+            ],
+          },
+        },
+      }),
+      db.about.findMany({
+        where: {
+          squareNumber: {
+            in: [1, 2, 3, 4],
+          },
+        },
+      }),
+    ]);
 
-    if (data) {
-      settings = {
-        header1: data.find((el) => el.field === "header1")?.value || "", // set either value from db or empty string
-        subHeader1: data.find((el) => el.field === "subHeader1")?.value || "",
-        header2: data.find((el) => el.field === "header2")?.value || "",
-        subHeader2: data.find((el) => el.field === "subHeader2")?.value || "",
-        sessionLength:
-          data.find((el) => el.field === "sessionLength")?.value || "",
-        price: data.find((el) => el.field === "price")?.value || "",
-        telegram:
-          data.find((element) => element.field === "telegram")?.value || "",
-        phone: data.find((element) => element.field === "phone")?.value || "",
-      };
-    } else {
+    if (!settingsData || !aboutData) {
       return <div className="text-red-800">Данные не найдены.</div>;
     }
+
+    settings = {
+      header1: settingsData.find((el) => el.field === "header1")?.value || "", // set either value from db or empty string
+      subHeader1:
+        settingsData.find((el) => el.field === "subHeader1")?.value || "",
+      header2: settingsData.find((el) => el.field === "header2")?.value || "",
+      subHeader2:
+        settingsData.find((el) => el.field === "subHeader2")?.value || "",
+      sessionLength:
+        settingsData.find((el) => el.field === "sessionLength")?.value || "",
+      price: settingsData.find((el) => el.field === "price")?.value || "",
+      telegram:
+        settingsData.find((element) => element.field === "telegram")?.value ||
+        "",
+      phone:
+        settingsData.find((element) => element.field === "phone")?.value || "",
+    };
+
+    about = {
+      square1text: aboutData.find((el) => el.squareNumber === 1)?.text || "",
+      square2text: aboutData.find((el) => el.squareNumber === 2)?.text || "",
+      square3text: aboutData.find((el) => el.squareNumber === 3)?.text || "",
+      square4text: aboutData.find((el) => el.squareNumber === 4)?.text || "",
+    };
   } catch (err) {
     console.log(err);
     return <div className="text-red-800">Ошибка при загрузке данных.</div>;
@@ -56,7 +79,7 @@ export default async function Home() {
       <HeroSection header={settings.header1} subHeader={settings.subHeader1} />
       <Video header={settings.header2} subHeader={settings.subHeader2} />
       <LongImageBar imageLink={"/img/bar/long6.jpg"} />
-      <About />
+      <About aboutData={about} />
 
       <LongImageBar imageLink={"/img/bar/long3.jpg"} />
       <HelpServer />

@@ -47,7 +47,7 @@ export default async function AdminPage() {
       <Header page="main" />
 
       <div className="max-w-screen-lg mx-auto ">
-        <div className="w-2/3">
+        <div className="w-[90%] md:w-2/3 mx-auto">
           <h1 className="admin-form-header mt-10">Основные настройки</h1>
           <SettingsForm {...settings} />
         </div>

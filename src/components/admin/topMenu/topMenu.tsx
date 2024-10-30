@@ -1,5 +1,4 @@
 "use client";
-import Link from "next/link";
 import React, { useState, useRef, useEffect } from "react";
 import { logout } from "@/actions/auth";
 import TopMenuItem from "./topMenuItem";
@@ -67,8 +66,16 @@ export default function Header({ page }: { page?: string }) {
 
           <TopMenuItem
             currentPage={page}
+            menuItemTargetPage="about"
+            link="/admin/about"
+          >
+            Обо мне
+          </TopMenuItem>
+
+          <TopMenuItem
+            currentPage={page}
             menuItemTargetPage="help"
-            link="admin/help"
+            link="/admin/help"
           >
             С чем помогаю
           </TopMenuItem>

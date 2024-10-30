@@ -12,7 +12,7 @@ export default async function EditUserPage() {
   return (
     <>
       <Header page="user" />
-      <div className={`card w-1/2 mt-10 mx-auto mb-10`}>
+      <div className={`card w-[90%] md:w-1/2 mt-10 mx-auto mb-10`}>
         <h1 className="admin-form-header">Редактировать пользователя</h1>
         <UserForm
           isEdit={true}

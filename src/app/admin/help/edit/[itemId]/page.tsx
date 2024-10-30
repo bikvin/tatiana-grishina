@@ -19,7 +19,7 @@ export default async function EditHelpPage({
     <>
       <Header page="help" />
       <div className="max-w-screen-lg mt-10 mx-auto flex justify-center">
-        <div className="w-1/2  mb-10">
+        <div className="w-[90%] md:w-1/2  mb-10">
           <h2 className="mt-10 admin-form-header">
             Редактировать пункт о помощи
           </h2>

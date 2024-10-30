@@ -34,3 +34,11 @@ model Help {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
+
+model About {
+  id           String   @id @default(cuid())
+  text         String
+  squareNumber Int      @unique
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
